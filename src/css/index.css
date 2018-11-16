@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "tf2-build";
+    src: url("../fonts/tf2build.ttf");
+}
+
+@font-face {
+    font-family: "tf2-secondary";
+    src: url("../fonts/TF2secondary.ttf");
+}
+
+@font-face {
+    font-family: "tf2-professor";
+    src: url("../fonts/tf2professor.ttf");
+}
+
+html, body, #root {
+    height: 100%;
+}

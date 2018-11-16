@@ -1,0 +1,48 @@
+.tf2-main {
+    background-color: #212121 !important;
+}
+
+.tf2-item {
+    text-align: center;
+}
+
+.tf2-item-image {
+    background-color: #3C362F;
+    border-radius: 10px;
+}
+
+.tf2-item-name {
+    color: #ffd700;
+    font-size: 18px;
+    line-height: 16px;
+    text-shadow: 2px 1px 1px #24201B;
+    font-family: tf2-build, Verdana, Geneva, sans-serif;
+}
+
+.tf2-item-attr {
+    font-family: tf2-secondary, Verdana, Geneva, sans-serif;
+    font-size: 15px;
+}
+
+.tf2-item-attr-level {
+    color: #756b5e;
+}
+
+.tf2-item-attr-positive {
+    color: #99ccff;
+}
+
+.tf2-item-attr-negative {
+    color: #ff4040;
+}
+
+.tf2-item-question {
+    color: #F3F2F2;
+    font-family: tf2-professor, Verdana, Geneva, sans-serif;
+    font-size: 50px;
+}
+
+.tf2-item-submit {
+    color: #F3F2F2;
+    font-family: tf2-professor, Verdana, Geneva, sans-serif;
+}

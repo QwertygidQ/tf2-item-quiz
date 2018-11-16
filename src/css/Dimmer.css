@@ -1,0 +1,42 @@
+#correct-dimmer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(83, 244, 71, .5);
+    z-index: 999;
+    display: none;
+}
+
+#incorrect-dimmer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(249, 0, 0, .5);
+    z-index: 999;
+    display: none;
+}
+
+
+#correct-dimmer-tick {
+    color: #00ff00;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+#incorrect-dimmer-cross {
+    color: #ff0000;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
