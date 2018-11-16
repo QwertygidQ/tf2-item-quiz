@@ -1,25 +1,36 @@
 import React, { Component } from 'react';
 
-import image from './img/rocket_jumper.png';
 import './css/TF2Item.css';
 
 class TF2Item extends Component {
     render() {
+        let item = this.props.item;
+        let missing_attr = this.props.missing_attr;
+
+        item.attrs.splice(missing_attr, 1);
+
         return (
             <div className="tf2-item">
-                <img className="tf2-item-image mb-1" src={ image } alt="The Rocket Jumper"/>
+                <img className="tf2-item-image mb-1" src={ item.img } alt={ item.name }/>
                 <br/>
-                <span className="tf2-item-name">The Rocket Jumper</span>
+                <span className="tf2-item-name">{ item.name }</span>
                 <br/>
-                <span className="tf2-item-attr tf2-item-attr-level">Level 1 Rocket Launcher</span>
-                <br/>
-                <span className="tf2-item-attr tf2-item-attr-positive">+200% max primary ammo on wearer</span>
-                <br/>
-                <span className="tf2-item-attr tf2-item-attr-positive">No self inflicted blast damage taken</span>
-                <br/>
-                <span className="tf2-item-attr tf2-item-attr-negative">No random critical hits</span>
-                <br/>
-                <span className="tf2-item-attr tf2-item-attr-negative">Wearer cannot carry the intelligence briefcase<br/>or PASS Time JACK</span>
+                <span className="tf2-item-attr tf2-item-attr-level">{ item.level }</span>
+                { item.attrs.map(
+                    function (out_object, i) {
+                        let splits = out_object.text.split('\n').map(
+                            (object, i) => (
+                                <div key={ i } className="tf2-item-attr-div">
+                                    <br/>
+                                    <span className={"tf2-item-attr " + (out_object.positive ? "tf2-item-attr-positive" : "tf2-item-attr-negative")}>
+                                        { object }
+                                    </span>
+                                </div>
+                            )
+                        );
+                        return splits;
+                    }
+                ) }
             </div>
         );
     }

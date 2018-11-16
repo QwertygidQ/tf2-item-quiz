@@ -24,6 +24,10 @@
     font-size: 15px;
 }
 
+.tf2-item-attr-div {
+    display: inline;
+}
+
 .tf2-item-attr-level {
     color: #756b5e;
 }
