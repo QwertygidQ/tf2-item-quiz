@@ -5,9 +5,11 @@ import './css/TF2Item.css';
 class TF2Item extends Component {
     render() {
         let item = this.props.item;
-        let missing_attr = this.props.missing_attr;
 
-        item.attrs.splice(missing_attr, 1);
+        if (this.props.question.type === "missing_attr") {
+            let missing_attr = this.props.question.missing_attr_id;
+            item.attrs.splice(missing_attr, 1);
+        }
 
         return (
             <div className="tf2-item">
