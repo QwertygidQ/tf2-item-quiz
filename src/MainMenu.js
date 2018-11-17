@@ -20,7 +20,10 @@ class MainMenu extends Component {
         let next_item = weapons[next_item_id];
         let next_missing_attr_id = getRandomInt(0, next_item.attrs.length - 1);
 
-        let next_answers = [next_item.attrs[next_missing_attr_id]];
+        let next_correct_answer = next_item.attrs[next_missing_attr_id];
+        next_correct_answer["correct"] = true;
+
+        let next_answers = [next_correct_answer];
         if (next_question === "missing_attr") {
             for (; next_answers.length < question_amount;) {
                 let question_item_id = getRandomInt(0, weapons.length - 1);
@@ -33,6 +36,7 @@ class MainMenu extends Component {
                 if (next_answers.filter(object => object.text === attr_item.text).length > 0)
                     continue
 
+                attr_item["correct"] = false;
                 next_answers.push(attr_item);
             }
         }
@@ -44,6 +48,7 @@ class MainMenu extends Component {
             question: {
                 type: next_question,
                 missing_attr_id: next_missing_attr_id,
+                missing_attr_text: next_correct_answer.text,
                 answers: next_answers
             }
         }
