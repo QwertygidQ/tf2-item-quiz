@@ -23,7 +23,7 @@ class TF2Question extends Component {
     }
 
     onSubmit(e) {
-        alert(this.state.correct_checked);
+        this.props.onSubmit(this.state.correct_checked);
     }
 
     render() {

@@ -53,6 +53,17 @@ class MainMenu extends Component {
                 answers: next_answers
             }
         }
+
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    onSubmit(correct) {
+        if (correct) {
+            let new_state = this.state;
+            new_state.score++;
+
+            this.setState(new_state);
+        }
     }
 
     render() {
@@ -65,10 +76,10 @@ class MainMenu extends Component {
                                 <TF2Item item={ weapons[this.state.current_weapon] } question={ this.state.question } />
                             </div>
                             <div className="column mr-4">
-                                <TF2Question question={ this.state.question }/>
+                                <TF2Question question={ this.state.question } onSubmit={ this.onSubmit }/>
                             </div>
                             <div className="column">
-                                <TF2Score />
+                                <TF2Score score={ this.state.score }/>
                             </div>
                         </div>
                     </div>
