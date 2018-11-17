@@ -4,6 +4,7 @@ import shuffle from 'shuffle-array';
 import { weapons } from './weapons'
 import TF2Item from './TF2Item';
 import TF2Question from './TF2Question';
+import TF2Score from './TF2Score';
 import getRandomInt from './random';
 import './css/MainMenu.css';
 
@@ -63,8 +64,11 @@ class MainMenu extends Component {
                             <div className="column mr-4">
                                 <TF2Item item={ weapons[this.state.current_weapon] } question={ this.state.question } />
                             </div>
-                            <div className="column">
+                            <div className="column mr-4">
                                 <TF2Question question={ this.state.question }/>
+                            </div>
+                            <div className="column">
+                                <TF2Score />
                             </div>
                         </div>
                     </div>

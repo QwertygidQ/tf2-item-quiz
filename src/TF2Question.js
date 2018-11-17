@@ -30,7 +30,7 @@ class TF2Question extends Component {
         if (this.props.question.type === "missing_attr")
             return (
                 <div>
-                    <h2 className="tf2-item-question">Which attribute is missing?</h2>
+                    <h1 className="tf2-item-question">Which attribute is missing?</h1>
                     { this.props.question.answers.map(function(object, i) {
                         return <TF2Answer
                                 key={ i }
