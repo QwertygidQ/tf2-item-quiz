@@ -1,0 +1,9 @@
+@import '../../node_modules/animate.css/animate.css';
+
+.scoreadd-enter {
+    animation: 0.5s slideInUp linear, 0.5s fadeIn linear;
+}
+
+.scoreadd-exit {
+    animation: 0.5s slideOutUp linear, 0.5s fadeOut linear;
+}
