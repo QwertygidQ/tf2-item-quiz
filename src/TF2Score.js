@@ -10,6 +10,14 @@ class TF2Score extends Component {
         this.state = {
             show_scoreadd: false
         }
+
+        this.showScoreAdd = this.showScoreAdd.bind(this);
+    }
+
+    showScoreAdd() {
+        this.setState({
+            show_scoreadd: true
+        });
     }
 
     render() {

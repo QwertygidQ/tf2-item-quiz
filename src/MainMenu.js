@@ -55,12 +55,16 @@ class MainMenu extends Component {
         }
 
         this.onSubmit = this.onSubmit.bind(this);
+        
+        this.score = React.createRef();
     }
 
     onSubmit(correct) {
         if (correct) {
             let new_state = this.state;
             new_state.score++;
+
+            this.score.current.showScoreAdd();
 
             this.setState(new_state);
         }
@@ -79,7 +83,7 @@ class MainMenu extends Component {
                                 <TF2Question question={ this.state.question } onSubmit={ this.onSubmit }/>
                             </div>
                             <div className="column">
-                                <TF2Score score={ this.state.score }/>
+                                <TF2Score ref={ this.score } score={ this.state.score }/>
                             </div>
                         </div>
                     </div>
