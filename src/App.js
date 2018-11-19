@@ -14,6 +14,7 @@ class App extends Component {
         };
 
         this.onGameStart = this.onGameStart.bind(this);
+        this.onGameOver = this.onGameOver.bind(this);
     }
 
     componentDidMount() {
@@ -35,7 +36,7 @@ class App extends Component {
         this.setState({
             current_state: this.state.current_state,
             transition_stage: "state-exit",
-            next_state: "Menu"
+            next_state: "Main"
         });
     }
 
@@ -47,7 +48,7 @@ class App extends Component {
             state = <MainMenu onGameStart={ this.onGameStart }/>;
             break;
         case "Game":
-            state = <GameMenu />;
+            state = <GameMenu onGameOver={ this.onGameOver }/>;
             break;
         default:
             state = <h1>Something went very wrong, refresh the page</h1>;

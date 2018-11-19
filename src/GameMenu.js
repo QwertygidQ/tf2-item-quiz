@@ -68,6 +68,8 @@ class GameMenu extends Component {
             this.score.current.showScoreAdd();
 
             this.setState(new_state);
+        } else {
+            this.props.onGameOver();
         }
     }
 
