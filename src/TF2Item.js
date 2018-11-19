@@ -16,10 +16,10 @@ class TF2Item extends Component {
                 { item.attrs.map(
                     function (out_object, i) {
                         if (this.props.question.type === "missing_attr" && i === this.props.question.missing_attr_id)
-                            return <span key={ i }></span>;
+                            return <span key={ "missing" }></span>;
                         let splits = out_object.text.split('\n').map(
-                            (object, i) => (
-                                <div key={ i } className="tf2-item-attr-div">
+                            (object, j) => (
+                                <div key={ ("" + i) + (" " + j) } className="tf2-item-attr-div">
                                     <br/>
                                     <span className={"tf2-item-attr " + (out_object.positive ? "tf2-item-attr-positive" : "tf2-item-attr-negative")}>
                                         { object }

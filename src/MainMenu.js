@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 
+import './css/TF2Item.css'
+
 class MainMenu extends Component {
     render() {
         return (
-            <button type="button" className="btn btn-outline-light" onClick={ this.props.onGameStart }>Start the quiz</button>
+            <div>
+                <h1 className="tf2-logo">TF2 Item Quiz</h1>
+                <button type="button" className="btn btn-outline-light" onClick={ this.props.onGameStart }>Start the quiz</button>
+            </div>
         );
     }
 }
