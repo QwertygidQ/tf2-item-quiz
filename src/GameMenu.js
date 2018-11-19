@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import shuffle from 'shuffle-array';
 
-import { weapons } from './weapons'
+import { weapons } from './weapons';
 import TF2Item from './TF2Item';
 import TF2Question from './TF2Question';
 import TF2Score from './TF2Score';

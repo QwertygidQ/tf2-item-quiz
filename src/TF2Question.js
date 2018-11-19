@@ -24,6 +24,14 @@ class TF2Question extends Component {
 
     onSubmit(e) {
         this.props.onSubmit(this.state.correct_checked);
+        this.setState({
+            correct_checked: false
+        });
+
+        let buttons = document.getElementsByName("answer");
+        buttons.forEach(element => {
+            element.checked = false;
+        });
     }
 
     render() {
