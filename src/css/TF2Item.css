@@ -41,19 +41,19 @@
 }
 
 .tf2-item-question {
-    color: #F3F2F2;
+    color: #EBE2CA;
     font-family: tf2-professor, Verdana, Geneva, sans-serif;
     font-size: 3rem;
     margin-top: -.5rem;
 }
 
 .tf2-item-submit {
-    color: #F3F2F2;
+    color: #EBE2CA;
     font-family: tf2-professor, Verdana, Geneva, sans-serif;
 }
 
 .tf2-score {
-    color: #F3F2F2;
+    color: #EBE2CA;
     font-family: tf2-professor, Verdana, Geneva, sans-serif;
     display: inline-block;
 }
@@ -65,7 +65,7 @@
 }
 
 .tf2-logo {
-    color: #F3F2F2;
+    color: #EBE2CA;
     font-family: tf2-professor, Verdana, Geneva, sans-serif;
     font-size: 5rem;
 }
