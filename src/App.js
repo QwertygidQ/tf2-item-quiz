@@ -34,11 +34,12 @@ class App extends Component {
         });
     }
 
-    onGameOver() {
+    onGameOver(score) {
         this.setState({
             current_state: this.state.current_state,
             transition_stage: "state-exit",
-            next_state: "GameOver"
+            next_state: "GameOver",
+            score: score
         });
     }
 
@@ -61,7 +62,7 @@ class App extends Component {
             state = <GameMenu onGameOver={ this.onGameOver }/>;
             break;
         case "GameOver":
-            state = <GameOverMenu score={ 0 } onMainMenu={ this.onMainMenu } onGameStart={ this.onGameStart }/>
+            state = <GameOverMenu score={ this.state.score } onMainMenu={ this.onMainMenu } onGameStart={ this.onGameStart }/>
             break;
         default:
             state = <h1>Something went very wrong, refresh the page</h1>;
