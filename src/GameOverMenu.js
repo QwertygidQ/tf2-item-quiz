@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
-import './css/TF2Item.css'
+import './css/Menu.css';
+import './css/TF2Item.css';
 
 class GameOverMenu extends Component {
     render() {
         return (
-            <div>
+            <div className="menu">
                 <h1 className="tf2-logo">Game Over!</h1>
                 <h2 className="tf2-score">Score: { this.props.score }</h2>
                 <br/>
