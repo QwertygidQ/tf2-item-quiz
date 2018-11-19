@@ -34,8 +34,9 @@ class MainMenu extends Component {
                 let question_item = weapons[question_item_id];
 
                 let attr_item = question_item.attrs[getRandomInt(0, question_item.attrs.length - 1)];
-                if (next_answers.filter(object => object.text === attr_item.text).length > 0)
-                    continue
+                if ((next_answers.filter(object => object.text === attr_item.text).length > 0) ||
+                    (next_item.attrs.filter(object => object.text === attr_item.text).length > 0))
+                    continue;
 
                 attr_item["correct"] = false;
                 next_answers.push(attr_item);
