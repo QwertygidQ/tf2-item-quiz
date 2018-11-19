@@ -12,6 +12,15 @@ class GameMenu extends Component {
     constructor(props) {
         super(props);
 
+        this.onSubmit = this.onSubmit.bind(this);
+        this.nextQuestion = this.nextQuestion.bind(this);
+
+        this.score = React.createRef();
+
+        this.state = this.nextQuestion(0);
+    }
+
+    nextQuestion(score) {
         const question_types = ["missing_attr"];
         const question_amount = 4;
 
@@ -44,8 +53,8 @@ class GameMenu extends Component {
         }
         shuffle(next_answers);
 
-        this.state = {
-            score: 0,
+        return {
+            score: score,
             current_weapon: next_item_id,
             question: {
                 type: next_question,
@@ -53,21 +62,13 @@ class GameMenu extends Component {
                 missing_attr_text: next_correct_answer.text,
                 answers: next_answers
             }
-        }
-
-        this.onSubmit = this.onSubmit.bind(this);
-        
-        this.score = React.createRef();
+        };
     }
 
     onSubmit(correct) {
         if (correct) {
-            let new_state = this.state;
-            new_state.score++;
-
             this.score.current.showScoreAdd();
-
-            this.setState(new_state);
+            this.setState(this.nextQuestion(this.state.score + 1));
         } else {
             this.props.onGameOver(this.state.score);
         }
