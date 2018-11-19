@@ -73,20 +73,16 @@ class GameMenu extends Component {
 
     render() {
         return (
-            <div id="outer" className="h-100 d-flex justify-content-center align-items-center">
-                <div className="card animated bounceInDown tf2-main mx-4">
-                    <div className="card-body">
-                        <div className="row m-2">
-                            <div className="column mr-4">
-                                <TF2Item item={ weapons[this.state.current_weapon] } question={ this.state.question } />
-                            </div>
-                            <div className="column mr-4">
-                                <TF2Question question={ this.state.question } onSubmit={ this.onSubmit }/>
-                            </div>
-                            <div className="column">
-                                <TF2Score ref={ this.score } score={ this.state.score }/>
-                            </div>
-                        </div>
+            <div className="container">
+                <div className="row m-2">
+                    <div className="column mr-4">
+                        <TF2Item item={ weapons[this.state.current_weapon] } question={ this.state.question } />
+                    </div>
+                    <div className="column mr-4">
+                        <TF2Question question={ this.state.question } onSubmit={ this.onSubmit }/>
+                    </div>
+                    <div className="column">
+                        <TF2Score ref={ this.score } score={ this.state.score }/>
                     </div>
                 </div>
             </div>
