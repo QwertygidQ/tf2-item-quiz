@@ -7,7 +7,7 @@ class MainMenu extends Component {
         return (
             <div>
                 <h1 className="tf2-logo">TF2 Item Quiz</h1>
-                <button type="button" className="btn btn-outline-light" onClick={ this.props.onGameStart }>Start the quiz</button>
+                <button type="button" className="btn btn-outline-light" onClick={ this.props.onGameStart }>Start the Quiz</button>
             </div>
         );
     }
