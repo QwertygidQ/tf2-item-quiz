@@ -5,9 +5,9 @@ import * as serviceWorker from './serviceWorker';
 
 import './css/index.css';
 import Dimmer from './Dimmer';
-import MainMenu from './MainMenu';
+import GameMenu from './GameMenu';
 
 ReactDOM.render(<Dimmer correct="false" />, document.getElementById('dimmers'));
-ReactDOM.render(<MainMenu />, document.getElementById('root'));
+ReactDOM.render(<GameMenu />, document.getElementById('root'));
 
 serviceWorker.unregister();

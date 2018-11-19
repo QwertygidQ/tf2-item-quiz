@@ -6,9 +6,9 @@ import TF2Item from './TF2Item';
 import TF2Question from './TF2Question';
 import TF2Score from './TF2Score';
 import getRandomInt from './random';
-import './css/MainMenu.css';
+import './css/GameMenu.css';
 
-class MainMenu extends Component {
+class GameMenu extends Component {
     constructor(props) {
         super(props);
 
@@ -94,4 +94,4 @@ class MainMenu extends Component {
     }
 }
 
-export default MainMenu;
+export default GameMenu;
