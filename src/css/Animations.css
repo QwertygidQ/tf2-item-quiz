@@ -7,3 +7,11 @@
 .scoreadd-exit {
     animation: 0.5s slideOutUp linear, 0.5s fadeOut linear;
 }
+
+.statechange-enter {
+    animation: 1.1s bounceInDown;
+}
+
+.statechange-exit {
+    animation: 1.1s bounceOutDown;
+}

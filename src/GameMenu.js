@@ -73,7 +73,7 @@ class GameMenu extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div>
                 <div className="row m-2">
                     <div className="column mr-4">
                         <TF2Item item={ weapons[this.state.current_weapon] } question={ this.state.question } />
