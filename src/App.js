@@ -6,6 +6,7 @@ import GameMenu from './GameMenu';
 import GameOverMenu from './GameOverMenu';
 
 import './css/Animations.css';
+import './css/App.css';
 
 class App extends Component {
     constructor(props) {
@@ -70,7 +71,7 @@ class App extends Component {
         }
 
         return (
-            <div id="outer" className="h-100 d-flex justify-content-center align-items-center">
+            <div id="outer" className={ "h-100 d-flex justify-content-center align-items-center " + (this.state.transition_stage === "state-enter" ? "scroll_overflow" : "") }>
                 <CSSTransition
                     in={ this.state.transition_stage === "state-enter" }
                     classNames="statechange"

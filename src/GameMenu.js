@@ -6,7 +6,6 @@ import TF2Item from './TF2Item';
 import TF2Question from './TF2Question';
 import TF2Score from './TF2Score';
 import getRandomInt from './random';
-import './css/GameMenu.css';
 
 class GameMenu extends Component {
     constructor(props) {
@@ -76,8 +75,8 @@ class GameMenu extends Component {
 
     render() {
         return (
-            <div>
-                <div className="row m-2">
+            <div className="">
+                <div className="row m-3">
                     <div className="column mr-4">
                         <TF2Item item={ weapons[this.state.current_weapon] } question={ this.state.question } />
                     </div>
