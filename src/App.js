@@ -75,7 +75,7 @@ class App extends Component {
                 <CSSTransition
                     in={ this.state.transition_stage === "state-enter" }
                     classNames="statechange"
-                    timeout={ 1100 }
+                    timeout={ 1000 }
                     onExited={ () => {  // state change from "state-enter" to "state-exit"
                         this.setState({
                             current_state: this.state.next_state,

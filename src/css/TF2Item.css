@@ -58,10 +58,16 @@
     display: inline-block;
 }
 
-.tf2-score-add {
+.tf2-score-add-visible {
     color: #00FF00;
     font-family: tf2-professor, Verdana, Geneva, sans-serif;
     display: inline-block;
+}
+
+.tf2-score-add-invisible {
+    font-family: tf2-professor, Verdana, Geneva, sans-serif;
+    display: inline-block;
+    visibility: hidden;
 }
 
 .tf2-logo {

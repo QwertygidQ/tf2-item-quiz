@@ -1,17 +1,17 @@
 @import '../../node_modules/animate.css/animate.css';
 
 .scoreadd-enter {
-    animation: 0.5s slideInUp linear, 0.5s fadeIn linear;
+    animation: 0.4s slideInUp linear, 0.4s fadeIn linear;
 }
 
 .scoreadd-exit {
-    animation: 0.5s slideOutUp linear, 0.5s fadeOut linear;
+    animation: 0.4s slideOutUp linear, 0.4s fadeOut linear;
 }
 
 .statechange-enter {
-    animation: 1.2s bounceInDown;
+    animation: 1s bounceInDown;
 }
 
 .statechange-exit {
-    animation: 1.2s bounceOutDown;
+    animation: 1s bounceOutDown;
 }
