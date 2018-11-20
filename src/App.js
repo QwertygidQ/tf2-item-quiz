@@ -82,11 +82,7 @@ class App extends Component {
                         });
                     } }
                     unmountOnExit>
-                    <div className="card tf2-main mx-4">
-                        <div className="card-body">
-                            { state }
-                        </div>
-                    </div>
+                    { state }
                 </CSSTransition>
             </div>
         );
