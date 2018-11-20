@@ -9,10 +9,8 @@ class GameOverMenu extends Component {
             <div className="menu">
                 <h1 className="tf2-logo">Game Over!</h1>
                 <h2 className="tf2-score">Score: { this.props.score }</h2>
-                <br/>
-                <button type="button" className="btn btn-outline-light mb-2" onClick={ this.props.onGameStart }>Try Again</button>
-                <br/>
-                <button type="button" className="btn btn-outline-light" onClick={ this.props.onMainMenu }>Back to Main Menu</button>
+                <button type="button" className="btn btn-outline-light btn-block" onClick={ this.props.onGameStart }>Try Again</button>
+                <button type="button" className="btn btn-outline-light btn-block mt-2" onClick={ this.props.onMainMenu }>Back to Main Menu</button>
             </div>
         );
     }
