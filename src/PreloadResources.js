@@ -13,7 +13,8 @@ class PreloadResources extends Component {
             </div>
         );
         const images = [ // TODO: load a proper list
-            "./img/chalkboard.png",
+            "./img/logo.png",
+            "./img/heavy-bg.png",
             "./img/cow_mangler.png",
             "./img/direct_hit.png",
             "./img/rocket_jumper.png",

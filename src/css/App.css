@@ -1,7 +1,11 @@
 #outer {
-    background-image: url("../img/chalkboard.png");
+    background-image: url("../img/heavy-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+#inner {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .scroll_overflow {

@@ -83,7 +83,11 @@ class App extends Component {
                         });
                     } }
                     unmountOnExit>
-                    { state }
+                    <div id="inner" className="card">
+                        <div className="card-body">
+                            { state }
+                        </div>
+                    </div>
                 </CSSTransition>
             </div>
         );
