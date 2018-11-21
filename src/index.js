@@ -5,9 +5,9 @@ import * as serviceWorker from './serviceWorker';
 
 import './css/index.css';
 import Dimmer from './Dimmer';
-import App from './App';
+import PreloadResources from './PreloadResources';
 
 ReactDOM.render(<Dimmer correct="false" />, document.getElementById('dimmers'));
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<PreloadResources />, document.getElementById('root'));
 
 serviceWorker.unregister();
