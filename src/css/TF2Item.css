@@ -8,6 +8,8 @@
 
 .tf2-item-image {
     background-color: #3C362F;
+    width: 90px;
+    height: 90px;
     border-radius: 10px;
 }
 
