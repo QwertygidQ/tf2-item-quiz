@@ -6,6 +6,7 @@
     justify-content: center;
     background-image: url("../img/heavy-bg.png");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
