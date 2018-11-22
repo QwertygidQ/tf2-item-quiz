@@ -1,2 +1,4 @@
 data/* linguist-vendored
 src/weapons.js linguist-vendored
+package_lock.json linguist-vendored
+package.json linguist-vendored
