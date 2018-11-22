@@ -42,6 +42,10 @@
     color: #ff4040;
 }
 
+.tf2-item-attr-neutral {
+    color: #EBE2CA;
+}
+
 .tf2-item-question {
     color: #EBE2CA;
     font-family: tf2-professor, Verdana, Geneva, sans-serif;

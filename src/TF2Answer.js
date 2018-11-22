@@ -5,7 +5,7 @@ class TF2Answer extends Component {
         return (
             <div className="custom-control custom-radio">
                 <input type="radio" id={ this.props.id } className="custom-control-input" name="answer" onChange={ this.props.onStateChange }/>
-                <label className={"custom-control-label tf2-item-attr " + this.props.type } htmlFor={ this.props.id }>{ this.props.text }</label>
+                <label className={"custom-control-label tf2-item-attr tf2-item-attr-" + this.props.type } htmlFor={ this.props.id }>{ this.props.text }</label>
             </div>
         );
     }

@@ -23,7 +23,7 @@ class TF2Item extends Component {
                                     (object, j) => (
                                         <div key={ ("" + i) + (" " + j) } className="tf2-item-attr-div">
                                             <br/>
-                                            <span className={"tf2-item-attr " + (out_object.positive ? "tf2-item-attr-positive" : "tf2-item-attr-negative")}>
+                                            <span className={"tf2-item-attr tf2-item-attr-" + out_object.type}>
                                                 { object }
                                             </span>
                                         </div>

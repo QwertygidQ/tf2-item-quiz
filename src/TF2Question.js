@@ -43,7 +43,7 @@ class TF2Question extends Component {
                         return <TF2Answer
                                 key={ i }
                                 id={ "answer-" + (i + 1) }
-                                type={ object.positive ? "tf2-item-attr-positive" : "tf2-item-attr-negative" }
+                                type={ object.type }
                                 text={ object.text }
                                 onStateChange={ this.onRadioStateChange }/>
                     }, this) }
