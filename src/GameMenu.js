@@ -76,15 +76,15 @@ class GameMenu extends Component {
 
     render() {
         return (
-            <div>
-                <div className="row m-3">
-                    <div className="mr-4">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-4">
                         <TF2Item item={ weapons[this.state.current_weapon] } question={ this.state.question } />
                     </div>
-                    <div className="mr-4">
+                    <div className="col-lg-6">
                         <TF2Question question={ this.state.question } onSubmit={ this.onSubmit }/>
                     </div>
-                    <div className="mr-4">
+                    <div className="col-lg-2">
                         <TF2Score ref={ this.score } score={ this.state.score }/>
                     </div>
                 </div>
