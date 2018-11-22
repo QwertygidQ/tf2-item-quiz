@@ -71,7 +71,7 @@ class App extends Component {
         }
 
         return (
-            <div id="outer" className={ "h-100 d-flex justify-content-center align-items-center " + (this.state.transition_stage === "state-enter" ? "scroll_overflow" : "") }>
+            <div id="outer">
                 <CSSTransition
                     in={ this.state.transition_stage === "state-enter" }
                     classNames="statechange"
@@ -83,7 +83,7 @@ class App extends Component {
                         });
                     } }
                     unmountOnExit>
-                    <div id="inner" className="card">
+                    <div id="inner" className="card m-4">
                         <div className="card-body">
                             { state }
                         </div>
