@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Preload } from 'react-preload';
 
 import App from './App';
+import { weapon_images } from './weapons';
 
 import './css/PreloadResources.css';
 
@@ -15,16 +16,13 @@ class PreloadResources extends Component {
         const images = [ // TODO: load a proper list
             "./img/logo.png",
             "./img/heavy-bg.png",
-            "./img/cow_mangler.png",
-            "./img/direct_hit.png",
-            "./img/rocket_jumper.png",
-        ];
+        ].concat(weapon_images);
         
         return (
             <Preload
                 loadingIndicator={ loading }
                 images={ images }
-                autoResolveDelay={ 5000 }>
+                autoResolveDelay={ 10000 }>
                 <App />
             </Preload>
         );
