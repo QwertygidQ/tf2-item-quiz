@@ -4,6 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import MainMenu from './MainMenu';
 import GameMenu from './GameMenu';
 import GameOverMenu from './GameOverMenu';
+import Credits from './Credits';
 
 import './css/Animations.css';
 import './css/App.css';
@@ -18,6 +19,7 @@ class App extends Component {
         this.onGameStart = this.onGameStart.bind(this);
         this.onGameOver = this.onGameOver.bind(this);
         this.onMainMenu = this.onMainMenu.bind(this);
+        this.onCredits = this.onCredits.bind(this);
     }
 
     componentDidMount() {
@@ -52,18 +54,29 @@ class App extends Component {
         });
     }
 
+    onCredits() {
+        this.setState({
+            current_state: this.state.current_state,
+            transition_stage: "state-exit",
+            next_state: "Credits"
+        })
+    }
+
     render() {
         let state;
         switch (this.state.current_state)
         {
         case "Main":
-            state = <MainMenu onGameStart={ this.onGameStart }/>;
+            state = <MainMenu onGameStart={ this.onGameStart } onCredits={ this.onCredits }/>;
             break;
         case "Game":
             state = <GameMenu onGameOver={ this.onGameOver }/>;
             break;
         case "GameOver":
             state = <GameOverMenu score={ this.state.score } onMainMenu={ this.onMainMenu } onGameStart={ this.onGameStart }/>
+            break;
+        case "Credits":
+            state = <Credits onMainMenu={ this.onMainMenu } />
             break;
         default:
             state = <h1>Something went very wrong, refresh the page</h1>;
