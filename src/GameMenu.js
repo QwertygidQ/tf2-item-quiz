@@ -24,17 +24,21 @@ class GameMenu extends Component {
         const question_amount = 4;
 
         let next_question = question_types[getRandomInt(0, question_types.length - 1)];
+        
+        let next_correct_answer, next_item_id, next_item, next_missing_attr_id;
+        do {
+            next_item_id = getRandomInt(0, weapons.length - 1);
+            next_item = weapons[next_item_id];
+            next_missing_attr_id = getRandomInt(0, next_item.attrs.length - 1);
 
-        let next_item_id = getRandomInt(0, weapons.length - 1);
-        let next_item = weapons[next_item_id];
-        let next_missing_attr_id = getRandomInt(0, next_item.attrs.length - 1);
+            next_correct_answer = next_item.attrs[next_missing_attr_id];
+        } while (next_correct_answer.text === "When weapon is active:");
 
-        let next_correct_answer = next_item.attrs[next_missing_attr_id];
         next_correct_answer["correct"] = true;
 
         let next_answers = [next_correct_answer];
         if (next_question === "missing_attr") {
-            for (; next_answers.length < question_amount;) {
+            while (next_answers.length < question_amount) {
                 let question_item_id = getRandomInt(0, weapons.length - 1);
                 if (question_item_id === next_item_id)
                     continue;
